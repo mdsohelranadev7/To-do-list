@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+.ds{
+    /* background: red; */
+    border: 1px solid red;
+    color:red;
+    margin-left: 55px;
+    margin-top: 20px;
+}
+

@@ -11,7 +11,7 @@ addbtn.addEventListener('click', () => {
 
     else {
         let hssd = document.createElement('li')
-        hssd.innerHTML = htel + ' <button onclick="ddd(this)">Delete</button>'
+        hssd.innerHTML = htel + ' <button class="ds" onclick="ddd(this)">Delete</button>'
 
         list.appendChild(hssd)
 

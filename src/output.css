@@ -9,6 +9,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -165,54 +166,51 @@
   }
 }
 @layer utilities {
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
   }
-  .flex {
-    display: flex;
+  .table {
+    display: table;
   }
-  .h-80 {
-    height: calc(var(--spacing) * 80);
+  .border-collapse {
+    border-collapse: collapse;
   }
-  .flex-row {
-    flex-direction: row;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .justify-center {
-    justify-content: center;
+  .resize {
+    resize: both;
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-red-500 {
-    border-color: var(--color-red-500);
-  }
-  .bg-gray-700 {
-    background-color: var(--color-gray-700);
+  .bg-amber-200 {
+    background-color: var(--color-amber-200);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
+  .underline {
+    text-decoration-line: underline;
   }
-  .text-center {
-    text-align: center;
-  }
-  .text-white {
-    color: var(--color-white);
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
 }
 .ds {
   border: 1px solid red;
   color: red;
   margin-left: 55px;
-  margin-top: 20px;
+  margin-top: 5 px;
 }
 @property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -221,6 +219,7 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-outline-style: solid;
     }
   }
 }

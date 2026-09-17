@@ -33,7 +33,7 @@ let stop = document.getElementById("stop")
 let timer = document.getElementById("timer")
 let inputss = document.getElementById("inputss")
 
-let dsds =0
+let dsds = 0
 let usertime = 0
 
 
@@ -77,7 +77,7 @@ start.addEventListener('click', () => {
     }
 
 
-    else{
+    else {
         alert('enter your minit')
     }
 
@@ -88,3 +88,4 @@ start.addEventListener('click', () => {
 stop.addEventListener('click', () => {
     clearInterval(delinee)
 })
+

@@ -2,6 +2,7 @@
 let inp = document.getElementById("inp")
 let addbtn = document.getElementById("addbtn")
 let list = document.getElementById("list")
+let deleteall = document.getElementById("deleteall")
 
 addbtn.addEventListener('click', () => {
     let htel = inp.value
@@ -11,7 +12,7 @@ addbtn.addEventListener('click', () => {
 
     else {
         let hssd = document.createElement('li')
-        hssd.innerHTML = htel + ' <button class="ds" onclick="ddd(this)">Delete</button>'
+        hssd.innerHTML = '<input type="checkbox">' + htel + ' <button class="ds" onclick="ddd(this)">Delete</button>'
 
         list.appendChild(hssd)
 
@@ -24,6 +25,21 @@ function ddd(ssd) {
     ssd.parentElement.remove()
 
 }
+
+deleteall.addEventListener('click', () => {
+    let ck = document.querySelectorAll('input[type="checkbox"]:checked')
+
+    ck.forEach(dss => {
+        dss.parentElement.remove(   )
+
+    })
+
+
+
+})
+
+
+
 
 
 
@@ -88,4 +104,39 @@ start.addEventListener('click', () => {
 stop.addEventListener('click', () => {
     clearInterval(delinee)
 })
+
+
+
+
+
+
+let nnn = document.getElementById("nnn")
+let aaa = document.getElementById("aaa")
+let uuu = document.getElementById("uuu")
+
+
+
+aaa.addEventListener('click', () => {
+    if (nnn.value == "") {
+        alert('sdfdsfl0')
+    }
+
+    else {
+        let iii = nnn.value
+        let li = document.createElement('li')
+        li.innerHTML = iii + ' <button onclick="jjj(this)">delete</button>'
+        uuu.appendChild(li)
+
+
+    }
+
+})
+
+
+function jjj(s) {
+
+    s.parentElement.remove()
+
+}
+
 

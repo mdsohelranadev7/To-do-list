@@ -30,7 +30,7 @@ deleteall.addEventListener('click', () => {
     let ck = document.querySelectorAll('input[type="checkbox"]:checked')
 
     ck.forEach(dss => {
-        dss.parentElement.remove(   )
+        dss.parentElement.remove()
 
     })
 
@@ -139,4 +139,126 @@ function jjj(s) {
 
 }
 
+
+
+let lastinput = document.getElementById('lastinput')
+let lastadd = document.getElementById('lastadd')
+let lastdeleteall = document.getElementById('lastdeleteall')
+let lastul = document.getElementById('lastul')
+
+
+lastadd.addEventListener('click', () => {
+
+    let input = lastinput.value
+
+    let li = document.createElement('li')
+    li.innerHTML = '<input type="checkbox"></input> ' + input + ' <button onclick="kds(this)">delete</button>'
+    lastul.appendChild(li)
+
+    lastinput.value = ""
+
+
+
+
+
+
+})
+
+function kds(s) {
+    s.parentElement.remove()
+
+}
+
+lastdeleteall.addEventListener('click', () => {
+
+    let sk = document.querySelectorAll('input[type="checkbox"]:checked')
+
+    sk.forEach(sks => {
+        sks.parentElement.remove()
+
+    })
+
+})
+
+
+
+let oj = document.getElementById("oj")
+let lk = document.getElementById("lk")
+let fd = document.getElementById("fd")
+let as = document.getElementById("as")
+
+
+
+lk.addEventListener('click', () => {
+
+    let ojs = oj.value
+    let li = document.createElement('li')
+    li.innerHTML = '<input type="checkbox">' + ojs + '    <button onclick="akdd(this)">Delete</button>'
+    as.appendChild(li)
+    oj.value = ""
+
+})
+
+
+function akdd(sass) {
+    sass.parentElement.remove()
+
+}
+
+
+fd.addEventListener('click', () => {
+    let sad =
+        document.querySelectorAll('input[type="checkbox"]:checked')
+
+    sad.forEach(sks => {
+        sks.parentElement.remove()
+
+    })
+
+})
+
+
+
+let isna = document.getElementById('isna')
+let dsakla = document.getElementById('dsakla')
+let sksk = document.getElementById('sksk')
+let clsa = document.getElementById('clsa')
+
+
+
+dsakla.addEventListener("click", () => {
+    let ska = sksfdfd();
+
+    sksk.style.backgroundColor = ska
+
+    isna.value = ska
+
+})
+
+
+function sksfdfd() {
+    let red = Math.floor(Math.random() * 255)
+    let green = Math.floor(Math.random() * 255)
+    let blue = Math.floor(Math.random() * 255)
+
+    return `rgb(${red},${green},${blue})`
+
+    // return `#${red.toString(16).padStart(2, '0')}${green.toString(16).padStart(2, '0')}${blue.toString(16).padStart(2, '0')}`
+
+}
+
+
+clsa.addEventListener('click', () => {
+    let ksafd = isna.value
+
+    navigator.clipboard.writeText(ksafd)
+
+    clsa.innerHTML = " copeid"
+
+
+    setTimeout(() => {
+        clsa.innerHTML = "copy"
+
+    }, 1000)
+})
 
